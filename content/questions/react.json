@@ -1,0 +1,62 @@
+[
+    {
+      "id": "react-q-001",
+      "title": "تفاوت useState و useReducer چیه؟",
+      "difficulty": "easy",
+      "stack": "react",
+      "category": "hooks",
+      "tags": ["hooks", "state"],
+      "followUps": ["کی useReducer رو ترجیح میدی؟", "آیا useReducer جایگزین Redux میشه؟"],
+      "answer": "## useState vs useReducer\n\n**useState** برای state ساده و مستقل مناسبه:\n```js\nconst [count, setCount] = useState(0);\n```\n\n**useReducer** وقتی state پیچیده‌ست یا transitions متعدد داری:\n```js\nconst [state, dispatch] = useReducer(reducer, initialState);\n```\n\n### کِی useReducer بهتره؟\n- وقتی چند مقدار state به هم وابسته‌ان\n- وقتی next state به prev state بستگی داره\n- وقتی logic پیچیده update داری"
+    },
+    {
+      "id": "react-q-002",
+      "title": "Virtual DOM چیه و چطور کار می‌کنه؟",
+      "difficulty": "easy",
+      "stack": "react",
+      "category": "core",
+      "tags": ["virtual-dom", "reconciliation"],
+      "followUps": ["تفاوت reconciliation و rendering چیه؟", "React Fiber چیه؟"],
+      "answer": "## Virtual DOM\n\nیه representation سبک از DOM واقعیه که در حافظه نگه داشته میشه.\n\n### چرخه کار:\n1. State تغییر می‌کنه\n2. React یه Virtual DOM جدید می‌سازه\n3. با Virtual DOM قبلی diff می‌گیره (Reconciliation)\n4. فقط تغییرات رو به DOM واقعی اعمال می‌کنه\n\n### مزیت:\nبه جای re-render کل صفحه، فقط المان‌های تغییر‌کرده آپدیت میشن."
+    },
+    {
+      "id": "react-q-003",
+      "title": "useEffect cleanup چیه و کِی باید ازش استفاده کنی؟",
+      "difficulty": "medium",
+      "stack": "react",
+      "category": "hooks",
+      "tags": ["hooks", "useEffect", "memory-leak"],
+      "followUps": ["memory leak چطور توی React اتفاق می‌افته؟"],
+      "answer": "## useEffect Cleanup\n\nوقتی از useEffect خارج میشی (component unmount یا dependency تغییر می‌کنه) باید side effectها رو پاک کنی.\n\n```js\nuseEffect(() => {\n  const subscription = subscribe(id);\n  \n  return () => {\n    // cleanup\n    subscription.unsubscribe();\n  };\n}, [id]);\n```\n\n### موارد نیاز به cleanup:\n- event listeners\n- timers (setTimeout, setInterval)\n- WebSocket connections\n- Abort controllers برای fetch"
+    },
+    {
+      "id": "react-q-004",
+      "title": "مشکل stale closure توی hooks چیه؟",
+      "difficulty": "hard",
+      "stack": "react",
+      "category": "hooks",
+      "tags": ["hooks", "closure", "advanced"],
+      "followUps": ["useRef چطور این مشکل رو حل می‌کنه؟"],
+      "answer": "## Stale Closure\n\nوقتی یه function توی useEffect مقدار قدیمی state رو می‌بینه:\n\n```js\n// مشکل‌دار\nuseEffect(() => {\n  const id = setInterval(() => {\n    setCount(count + 1); // همیشه count=0 میبینه!\n  }, 1000);\n  return () => clearInterval(id);\n}, []); // dependency خالی\n\n// راه‌حل ۱: functional update\nsetCount(prev => prev + 1);\n\n// راه‌حل ۲: useRef\nconst countRef = useRef(count);\ncountRef.current = count;\n```"
+    },
+    {
+      "id": "react-q-005",
+      "title": "React.memo، useMemo و useCallback چه فرقی دارن؟",
+      "difficulty": "medium",
+      "stack": "react",
+      "category": "performance",
+      "tags": ["performance", "memoization", "hooks"],
+      "followUps": ["کِی نباید از memo استفاده کنی؟"],
+      "answer": "## Memoization در React\n\n**React.memo** — component رو cache می‌کنه، اگه props تغییر نکنه re-render نمیشه:\n```js\nconst MyComp = React.memo(({ name }) => <div>{name}</div>);\n```\n\n**useMemo** — نتیجه یه computation رو cache می‌کنه:\n```js\nconst sorted = useMemo(() => items.sort(), [items]);\n```\n\n**useCallback** — تابع رو cache می‌کنه (برای پاس دادن به child):\n```js\nconst handleClick = useCallback(() => doSomething(id), [id]);\n```\n\n### قانون طلایی:\nاول بدون memo بنویس، بعد اگه performance issue دیدی اضافه کن."
+    },
+    {
+      "id": "react-q-006",
+      "title": "Context API چه محدودیت‌هایی داره؟",
+      "difficulty": "medium",
+      "stack": "react",
+      "category": "core",
+      "tags": ["context", "performance", "state-management"],
+      "followUps": ["چه جایگزین‌هایی برای Context داری؟", "Zustand vs Redux چیه؟"],
+      "answer": "## محدودیت‌های Context API\n\n### مشکل اصلی: re-render\nهر component ای که از Context استفاده کنه، با هر تغییری در value کل context re-render میشه.\n\n```js\n// بد: همه consumer ها re-render میشن\n<AuthContext.Provider value={{ user, theme, lang }}>\n\n// بهتر: Context رو split کن\n<UserContext.Provider value={user}>\n  <ThemeContext.Provider value={theme}>\n```\n\n### راه‌حل‌ها:\n- تقسیم context به بخش‌های کوچکتر\n- استفاده از Zustand یا Jotai برای state پیچیده\n- `memo` برای consumer ها"
+    }
+  ]

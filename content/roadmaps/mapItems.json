@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "level": "۱",
+      "title": "مسیر یادگیری",
+      "titleEn": "Learning Path",
+      "desc": "نقشه راه شخصی‌سازی‌شده برای رسیدن به هدف شغلی",
+      "icon": "🗺️",
+      "color": "#3B82F6",
+      "glow": "rgba(59,130,246,0.4)",
+      "tags": ["Frontend", "Backend", "DevOps"]
+    },
+    {
+      "id": 2,
+      "level": "۲",
+      "title": "آموزش تخصصی",
+      "titleEn": "Skill Building",
+      "desc": "محتوای آموزشی کوراته‌شده از بهترین منابع جهانی",
+      "icon": "📚",
+      "color": "#8B5CF6",
+      "glow": "rgba(139,92,246,0.4)",
+      "tags": ["ویدیو", "پروژه", "کوییز"]
+    },
+    {
+      "id": 3,
+      "level": "۳",
+      "title": "ساخت رزومه",
+      "titleEn": "Resume Builder",
+      "desc": "رزومه‌ای که توسط متخصصان واقعی بررسی می‌شود",
+      "icon": "📄",
+      "color": "#06B6D4",
+      "glow": "rgba(6,182,212,0.4)",
+      "tags": ["ATS", "AI Review", "Portfolio"]
+    },
+    {
+      "id": 4,
+      "level": "۴",
+      "title": "آماده‌سازی مصاحبه",
+      "titleEn": "Interview Prep",
+      "desc": "بانک +۳۸۰۰ سوال و تمرین مصاحبه با هوش مصنوعی",
+      "icon": "🎯",
+      "color": "#10B981",
+      "glow": "rgba(16,185,129,0.4)",
+      "tags": ["Live Mock", "Coding", "HR"]
+    },
+    {
+      "id": 5,
+      "level": "۵",
+      "title": "درخواست شغل",
+      "titleEn": "Job Apply",
+      "desc": "اتصال مستقیم به فرصت‌های شغلی واقعی در بازار",
+      "icon": "🚀",
+      "color": "#F59E0B",
+      "glow": "rgba(245,158,11,0.4)",
+      "tags": ["Remote", "Startup", "Enterprise"]
+    }
+  ]

@@ -1,0 +1,390 @@
+{
+  "stack": "react",
+  "title": "React",
+  "description": "از صفر تا سینیور React. همه چیزی که برای بازار کار نیاز داری.",
+  "levels": [
+    {
+      "level": "junior",
+      "title": "جونیور",
+      "estimateWeeks": 16,
+      "phases": [
+        {
+          "id": "jr-phase-1",
+          "title": "پایه‌های JavaScript",
+          "description": "قبل از React، باید JS رو درست بلد باشی",
+          "nodes": [
+            {
+              "id": "js-es6",
+              "title": "ES6+ Features",
+              "description": "Arrow functions، destructuring، spread، modules، async/await",
+              "importance": "must",
+              "tags": ["javascript", "es6"],
+              "resources": [
+                { "title": "javascript.info", "url": "https://javascript.info", "type": "doc" },
+                { "title": "ES6 for Everyone — Wes Bos", "url": "https://es6.io", "type": "course" }
+              ]
+            },
+            {
+              "id": "js-dom",
+              "title": "DOM & Events",
+              "description": "querySelector، addEventListener، event bubbling",
+              "importance": "must",
+              "tags": ["javascript", "dom"],
+              "resources": [
+                { "title": "MDN DOM Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model", "type": "doc" }
+              ]
+            },
+            {
+              "id": "js-fetch",
+              "title": "Fetch API & Promises",
+              "description": "fetch، axios، async/await، error handling",
+              "importance": "must",
+              "tags": ["javascript", "async"],
+              "resources": [
+                { "title": "MDN Fetch", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API", "type": "doc" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jr-phase-2",
+          "title": "React Core",
+          "description": "اصول اولیه React که باید مثل آب خوردن بلد باشی",
+          "nodes": [
+            {
+              "id": "react-jsx",
+              "title": "JSX & Components",
+              "description": "functional components، props، children، fragments",
+              "importance": "must",
+              "tags": ["react", "jsx"],
+              "resources": [
+                { "title": "React Docs — Describing the UI", "url": "https://react.dev/learn/describing-the-ui", "type": "doc" }
+              ]
+            },
+            {
+              "id": "react-hooks",
+              "title": "Hooks اساسی",
+              "description": "useState، useEffect، useRef، useContext",
+              "importance": "must",
+              "tags": ["react", "hooks"],
+              "resources": [
+                { "title": "React Docs — Hooks", "url": "https://react.dev/reference/react", "type": "doc" }
+              ]
+            },
+            {
+              "id": "react-lists",
+              "title": "Lists & Conditional Rendering",
+              "description": "map، filter، key prop، short-circuit rendering",
+              "importance": "must",
+              "tags": ["react"],
+              "resources": []
+            },
+            {
+              "id": "react-forms",
+              "title": "Forms & Controlled Inputs",
+              "description": "controlled vs uncontrolled، form validation، react-hook-form",
+              "importance": "must",
+              "tags": ["react", "forms"],
+              "resources": [
+                { "title": "react-hook-form", "url": "https://react-hook-form.com", "type": "doc" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jr-phase-3",
+          "title": "Styling",
+          "description": "روش‌های مختلف استایل‌دهی در React",
+          "nodes": [
+            {
+              "id": "css-modules",
+              "title": "CSS Modules",
+              "description": "scoped styles، composition، naming conventions",
+              "importance": "must",
+              "tags": ["css"],
+              "resources": []
+            },
+            {
+              "id": "tailwind",
+              "title": "Tailwind CSS",
+              "description": "utility-first، responsive، dark mode، custom config",
+              "importance": "should",
+              "tags": ["css", "tailwind"],
+              "resources": [
+                { "title": "Tailwind Docs", "url": "https://tailwindcss.com/docs", "type": "doc" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jr-phase-4",
+          "title": "Routing & Data",
+          "description": "navigation و data fetching",
+          "nodes": [
+            {
+              "id": "react-router",
+              "title": "React Router v6",
+              "description": "BrowserRouter، Route، Link، useNavigate، useParams",
+              "importance": "must",
+              "tags": ["react", "routing"],
+              "resources": [
+                { "title": "React Router Docs", "url": "https://reactrouter.com/en/main", "type": "doc" }
+              ]
+            },
+            {
+              "id": "data-fetching",
+              "title": "Data Fetching",
+              "description": "useEffect pattern، React Query، loading/error states",
+              "importance": "must",
+              "tags": ["react", "data"],
+              "resources": [
+                { "title": "TanStack Query", "url": "https://tanstack.com/query", "type": "doc" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jr-phase-5",
+          "title": "آماده شدن برای مصاحبه",
+          "description": "آخرین مراحل قبل از apply کردن",
+          "nodes": [
+            {
+              "id": "git",
+              "title": "Git & GitHub",
+              "description": "branching، PRs، conventional commits",
+              "importance": "must",
+              "tags": ["git"],
+              "resources": []
+            },
+            {
+              "id": "portfolio",
+              "title": "Portfolio Project",
+              "description": "یه پروژه کامل: auth، CRUD، responsive، deploy روی Vercel",
+              "importance": "must",
+              "tags": ["project"],
+              "resources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "mid",
+      "title": "میدلول",
+      "estimateWeeks": 12,
+      "phases": [
+        {
+          "id": "mid-phase-1",
+          "title": "State Management",
+          "description": "مدیریت state در اپ‌های بزرگ",
+          "nodes": [
+            {
+              "id": "zustand",
+              "title": "Zustand",
+              "description": "ساده‌ترین و محبوب‌ترین state manager برای React",
+              "importance": "must",
+              "tags": ["react", "state"],
+              "resources": [
+                { "title": "Zustand Docs", "url": "https://zustand-demo.pmnd.rs", "type": "doc" }
+              ]
+            },
+            {
+              "id": "redux-toolkit",
+              "title": "Redux Toolkit",
+              "description": "RTK، createSlice، createAsyncThunk، RTK Query",
+              "importance": "should",
+              "tags": ["react", "redux"],
+              "resources": [
+                { "title": "Redux Toolkit Docs", "url": "https://redux-toolkit.js.org", "type": "doc" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid-phase-2",
+          "title": "Performance",
+          "description": "اپ React رو سریع کن",
+          "nodes": [
+            {
+              "id": "memo",
+              "title": "React.memo & useMemo & useCallback",
+              "description": "کِی و چرا از اینا استفاده کنیم — و کِی نه",
+              "importance": "must",
+              "tags": ["react", "performance"],
+              "resources": []
+            },
+            {
+              "id": "code-splitting",
+              "title": "Code Splitting & Lazy Loading",
+              "description": "React.lazy، Suspense، dynamic imports",
+              "importance": "must",
+              "tags": ["react", "performance"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "mid-phase-3",
+          "title": "Testing",
+          "description": "تست نوشتن — مهارتی که خیلی‌ها ندارن",
+          "nodes": [
+            {
+              "id": "jest",
+              "title": "Jest — Unit Testing",
+              "description": "describe، it، expect، mock functions",
+              "importance": "must",
+              "tags": ["testing", "jest"],
+              "resources": [
+                { "title": "Jest Docs", "url": "https://jestjs.io/docs/getting-started", "type": "doc" }
+              ]
+            },
+            {
+              "id": "rtl",
+              "title": "React Testing Library",
+              "description": "render، screen، userEvent، queries",
+              "importance": "must",
+              "tags": ["testing", "react"],
+              "resources": [
+                { "title": "Testing Library Docs", "url": "https://testing-library.com/docs/react-testing-library/intro", "type": "doc" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid-phase-4",
+          "title": "Custom Hooks & Patterns",
+          "description": "نوشتن کد React حرفه‌ای",
+          "nodes": [
+            {
+              "id": "custom-hooks",
+              "title": "Custom Hooks",
+              "description": "استخراج logic به hooks قابل استفاده مجدد",
+              "importance": "must",
+              "tags": ["react", "hooks"],
+              "resources": []
+            },
+            {
+              "id": "compound-components",
+              "title": "Compound Components Pattern",
+              "description": "ساختن کامپوننت‌های انعطاف‌پذیر",
+              "importance": "should",
+              "tags": ["react", "patterns"],
+              "resources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "senior",
+      "title": "سینیور",
+      "estimateWeeks": 16,
+      "phases": [
+        {
+          "id": "sr-phase-1",
+          "title": "Architecture",
+          "description": "طراحی اپ‌های بزرگ و مقیاس‌پذیر",
+          "nodes": [
+            {
+              "id": "folder-structure",
+              "title": "Scalable Folder Structure",
+              "description": "feature-based، domain-driven، monorepo با Turborepo",
+              "importance": "must",
+              "tags": ["architecture"],
+              "resources": []
+            },
+            {
+              "id": "micro-frontend",
+              "title": "Micro Frontend",
+              "description": "Module Federation، مزایا و معایب",
+              "importance": "should",
+              "tags": ["architecture"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "sr-phase-2",
+          "title": "Design Systems",
+          "description": "ساختن component library حرفه‌ای",
+          "nodes": [
+            {
+              "id": "design-tokens",
+              "title": "Design Tokens",
+              "description": "رنگ، typography، spacing به صورت متغیر",
+              "importance": "must",
+              "tags": ["design-system"],
+              "resources": []
+            },
+            {
+              "id": "storybook",
+              "title": "Storybook",
+              "description": "document و تست کامپوننت‌ها به صورت ایزوله",
+              "importance": "must",
+              "tags": ["design-system"],
+              "resources": [
+                { "title": "Storybook Docs", "url": "https://storybook.js.org/docs", "type": "doc" }
+              ]
+            },
+            {
+              "id": "accessibility",
+              "title": "Accessibility (a11y)",
+              "description": "ARIA، keyboard navigation، WCAG",
+              "importance": "must",
+              "tags": ["a11y"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "sr-phase-3",
+          "title": "Next.js پیشرفته",
+          "description": "رندرینگ سمت سرور و بهینه‌سازی",
+          "nodes": [
+            {
+              "id": "nextjs-app-router",
+              "title": "Next.js App Router",
+              "description": "Server Components، streaming، Suspense",
+              "importance": "must",
+              "tags": ["nextjs", "ssr"],
+              "resources": [
+                { "title": "Next.js Docs", "url": "https://nextjs.org/docs", "type": "doc" }
+              ]
+            },
+            {
+              "id": "caching",
+              "title": "Caching Strategy",
+              "description": "ISR، revalidate، cache tags",
+              "importance": "must",
+              "tags": ["nextjs", "performance"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "sr-phase-4",
+          "title": "رهبری فنی",
+          "description": "مهارت‌هایی که senior رو از mid جدا می‌کنه",
+          "nodes": [
+            {
+              "id": "mentoring",
+              "title": "Mentoring",
+              "description": "چطور به junior ها کمک کنی",
+              "importance": "must",
+              "tags": ["career", "leadership"],
+              "resources": []
+            },
+            {
+              "id": "technical-decisions",
+              "title": "Technical Decision Making",
+              "description": "RFC نوشتن، trade-off analysis",
+              "importance": "must",
+              "tags": ["career", "architecture"],
+              "resources": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "stack": "angular",
+  "title": "Angular",
+  "description": "از صفر تا سینیور Angular. همه مفاهیم مورد نیاز برای بازار کار.",
+  "levels": [
+    {
+      "level": "junior",
+      "title": "جونیور",
+      "estimateWeeks": 16,
+      "phases": [
+        {
+          "id": "ng-jr-phase-1",
+          "title": "پایه‌های TypeScript",
+          "description": "Angular بدون TypeScript معنی نداره",
+          "nodes": [
+            {
+              "id": "ts-basics",
+              "title": "TypeScript Basics",
+              "description": "types، interfaces، enums، generics",
+              "importance": "must",
+              "tags": ["typescript"],
+              "resources": [
+                { "title": "TypeScript Docs", "url": "https://www.typescriptlang.org/docs/", "type": "doc" }
+              ]
+            },
+            {
+              "id": "ts-classes",
+              "title": "Classes & Decorators",
+              "description": "class syntax، access modifiers، decorators",
+              "importance": "must",
+              "tags": ["typescript", "oop"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-jr-phase-2",
+          "title": "Angular Core",
+          "description": "اصول اولیه Angular",
+          "nodes": [
+            {
+              "id": "ng-components",
+              "title": "Components & Templates",
+              "description": "component decorator، template syntax، data binding",
+              "importance": "must",
+              "tags": ["angular"],
+              "resources": [
+                { "title": "Angular Docs", "url": "https://angular.dev", "type": "doc" }
+              ]
+            },
+            {
+              "id": "ng-directives",
+              "title": "Directives",
+              "description": "ngIf، ngFor، ngClass، custom directives",
+              "importance": "must",
+              "tags": ["angular"],
+              "resources": []
+            },
+            {
+              "id": "ng-services",
+              "title": "Services & Dependency Injection",
+              "description": "Injectable، providedIn، DI pattern",
+              "importance": "must",
+              "tags": ["angular", "di"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-jr-phase-3",
+          "title": "RxJS پایه",
+          "description": "قلب Angular",
+          "nodes": [
+            {
+              "id": "rxjs-basics",
+              "title": "Observable & Subject",
+              "description": "Observable، Subject، BehaviorSubject، subscribe",
+              "importance": "must",
+              "tags": ["rxjs"],
+              "resources": [
+                { "title": "RxJS Docs", "url": "https://rxjs.dev", "type": "doc" }
+              ]
+            },
+            {
+              "id": "rxjs-operators",
+              "title": "Operators پایه",
+              "description": "map، filter، tap، takeUntil، switchMap",
+              "importance": "must",
+              "tags": ["rxjs"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-jr-phase-4",
+          "title": "Routing & Forms",
+          "description": "navigation و فرم‌ها",
+          "nodes": [
+            {
+              "id": "ng-routing",
+              "title": "Angular Router",
+              "description": "RouterModule، lazy loading، guards",
+              "importance": "must",
+              "tags": ["angular", "routing"],
+              "resources": []
+            },
+            {
+              "id": "ng-forms",
+              "title": "Reactive Forms",
+              "description": "FormGroup، FormControl، validators",
+              "importance": "must",
+              "tags": ["angular", "forms"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-jr-phase-5",
+          "title": "آماده شدن برای مصاحبه",
+          "description": "آخرین مراحل",
+          "nodes": [
+            {
+              "id": "ng-signals",
+              "title": "Signals در Angular 17+",
+              "description": "signal، computed، effect",
+              "importance": "should",
+              "tags": ["angular", "signals"],
+              "resources": [
+                { "title": "Angular Signals", "url": "https://angular.dev/guide/signals", "type": "doc" }
+              ]
+            },
+            {
+              "id": "ng-portfolio",
+              "title": "Portfolio Project",
+              "description": "یه پروژه کامل Angular با routing، forms و deploy",
+              "importance": "must",
+              "tags": ["project"],
+              "resources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "mid",
+      "title": "میدلول",
+      "estimateWeeks": 12,
+      "phases": [
+        {
+          "id": "ng-mid-phase-1",
+          "title": "State Management",
+          "description": "مدیریت state در اپ‌های بزرگ Angular",
+          "nodes": [
+            {
+              "id": "ngrx",
+              "title": "NgRx",
+              "description": "Store، Actions، Reducers، Effects، Selectors",
+              "importance": "should",
+              "tags": ["angular", "state"],
+              "resources": [
+                { "title": "NgRx Docs", "url": "https://ngrx.io/docs", "type": "doc" }
+              ]
+            },
+            {
+              "id": "ng-signals-state",
+              "title": "Signals برای State",
+              "description": "جایگزین مدرن NgRx برای اپ‌های جدید",
+              "importance": "must",
+              "tags": ["angular", "signals"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-mid-phase-2",
+          "title": "Performance",
+          "description": "Angular رو سریع کن",
+          "nodes": [
+            {
+              "id": "change-detection",
+              "title": "Change Detection",
+              "description": "OnPush strategy، zone.js، detach",
+              "importance": "must",
+              "tags": ["angular", "performance"],
+              "resources": []
+            },
+            {
+              "id": "ng-lazy",
+              "title": "Lazy Loading",
+              "description": "lazy modules، standalone components، preloading",
+              "importance": "must",
+              "tags": ["angular", "performance"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-mid-phase-3",
+          "title": "Testing",
+          "description": "تست در Angular",
+          "nodes": [
+            {
+              "id": "ng-testing",
+              "title": "TestBed & Component Testing",
+              "description": "TestBed، ComponentFixture، async testing",
+              "importance": "must",
+              "tags": ["testing", "angular"],
+              "resources": []
+            },
+            {
+              "id": "ng-cypress",
+              "title": "Cypress E2E",
+              "description": "تست end-to-end برای Angular apps",
+              "importance": "should",
+              "tags": ["testing", "e2e"],
+              "resources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "senior",
+      "title": "سینیور",
+      "estimateWeeks": 14,
+      "phases": [
+        {
+          "id": "ng-sr-phase-1",
+          "title": "Architecture",
+          "description": "معماری enterprise Angular",
+          "nodes": [
+            {
+              "id": "ng-architecture",
+              "title": "Nx Monorepo",
+              "description": "Nx workspace، libraries، code sharing",
+              "importance": "should",
+              "tags": ["architecture", "angular"],
+              "resources": [
+                { "title": "Nx Docs", "url": "https://nx.dev", "type": "doc" }
+              ]
+            },
+            {
+              "id": "ng-standalone",
+              "title": "Standalone Components",
+              "description": "بدون NgModule — آینده Angular",
+              "importance": "must",
+              "tags": ["angular"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-sr-phase-2",
+          "title": "RxJS پیشرفته",
+          "description": "تسلط کامل روی reactive programming",
+          "nodes": [
+            {
+              "id": "rxjs-advanced",
+              "title": "Advanced Operators",
+              "description": "mergeMap، concatMap، exhaustMap، forkJoin، combineLatest",
+              "importance": "must",
+              "tags": ["rxjs"],
+              "resources": []
+            },
+            {
+              "id": "rxjs-patterns",
+              "title": "RxJS Patterns",
+              "description": "facade pattern، state with BehaviorSubject",
+              "importance": "must",
+              "tags": ["rxjs", "patterns"],
+              "resources": []
+            }
+          ]
+        },
+        {
+          "id": "ng-sr-phase-3",
+          "title": "رهبری فنی",
+          "description": "مهارت‌هایی که senior رو از mid جدا می‌کنه",
+          "nodes": [
+            {
+              "id": "ng-mentoring",
+              "title": "Mentoring",
+              "description": "چطور به junior ها کمک کنی",
+              "importance": "must",
+              "tags": ["career"],
+              "resources": []
+            },
+            {
+              "id": "ng-decisions",
+              "title": "Technical Decision Making",
+              "description": "RFC نوشتن، انتخاب بین Angular versions",
+              "importance": "must",
+              "tags": ["career", "architecture"],
+              "resources": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
