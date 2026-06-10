@@ -1,5 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
-import MainMap from "@/components/sections/MainMap";
+import MainMap from "@/components/sections/Map/MainMap";
 import { FileText, Zap, MapPlus, CircleQuestionMark, Mic, Briefcase, Rss, LucideIcon } from "lucide-react";
 import Link from "next/link";
 

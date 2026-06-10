@@ -1,10 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
+import '@/app/globals.css';
+
+
 export function MapCard({item, active}: any) {
     return(
         <div
-        className={`w-70 rounded-2xl px-6 py-5 backdrop-blur-xl transition-all duration-300 relative overflow-hidden z-0 ${
+        className={`w-70 rounded-2xl px-6 py-5 backdrop-blur-xl transition-all duration-300 relative overflow-hidden z-10 ${
             active ? "bg-white/10" : "bg-white/5"
           }`}
           style={{
@@ -23,19 +26,22 @@ export function MapCard({item, active}: any) {
                 />
             )}
 
-            <div className="flex items-center gap-3 mb-10 relative z-10">
+            <div className="flex items-center gap-3 mb-5 relative z-10">
                 <span className="text-3xl">{item.icon}</span>
                 <div>
-                    <div className="text-xs font-bold tracking-0.5 mb-0.5">
+                    <div className="text-xs font-bold tracking-0.5 mb-2.5">
                         مرحله {item.level}
                     </div>
-                    <div className="text-base font-bolf text-white leading-tight rtl">
+                    <div className="text-base font-bold text-white leading-tight rtl">
                         {item.title}
-                    </div>
+                    </div> 
+                    <div className="text-sm font-normal text-gray-400 leading-tight rtl mt-3">
+                        {item.desc}
+                    </div> 
                 </div>
             </div>
 
-            <p className="flex gap-1.5 flex-wrap relative z-10">
+            <p className="flex gap-1.5 flex-wrap">
                 {item.tags.map((tag:string)=> (
                     <span
                         key={tag}
@@ -44,7 +50,7 @@ export function MapCard({item, active}: any) {
                         color: item.color,
                         border: `1px solid ${item.color}40`,
                         }}
-                        className="text-xs px-2.5 py-0.5 rounded-full font-semibold tracking-[0.5px] mx-0.5"
+                        className="text-xs px-1.5 py-0.5 rounded-full font-semibold tracking-0.5 mx-0"
                     >
                         {tag}
                     </span>
@@ -53,3 +59,4 @@ export function MapCard({item, active}: any) {
         </div>
     )
 }
+

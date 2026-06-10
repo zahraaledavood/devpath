@@ -7,12 +7,14 @@ import mapItems from "@/content/roadmaps/mapItems.json"
 
 export default function MainMap(){
   const [active, setActive] = useState<number | null>(null);
+  const [showLine, setShowLine] = useState<boolean | null>(null)
   const [lineH, setLineH] = useState<number>(0);
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(()=> {
     const timer = setTimeout(() => setLineH(100), 500);
-    return () => clearTimeout(timer);
+    const lineTimer = setTimeout(() => setShowLine(true), 900); 
+    return () => { clearTimeout(timer); clearTimeout(lineTimer); }    
   }, []);
 
   const toggle = (id:number) => setActive((prev) => (prev === id ? null : id))
@@ -20,8 +22,8 @@ export default function MainMap(){
   return (
     <section className="relative w-full px-5 py-20 overflow-hidden" ref={containerRef}>
       <div className="relative max-w-2xl mx-auto flex flex-col">
-        <MapLine lineH={lineH} />
-        <div className="flex flex-col gap-10">
+        {showLine && <MapLine lineH={lineH} />}
+        <div className="flex flex-col gap-10 relative z-10 isolate">
           {mapItems.map((item, i) => (
               <MapNode
                 key={item.id}

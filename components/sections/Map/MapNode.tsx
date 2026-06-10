@@ -12,7 +12,7 @@ export function MapNode({item, index, isLeft, active, onClick}: MapNodeProps) {
     const visible = useIntersection(ref);
     
     return (
-        <div className="flex items-center w-full justify-center cursor-pointer relative z-20 transition-all duration-700"
+        <div className="flex items-center w-full justify-center cursor-pointer relative z-20 transition-all duration-700 isolate"
             ref={ref}
             onClick={() => onClick(item.id)}
             style={{

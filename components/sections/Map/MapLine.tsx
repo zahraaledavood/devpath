@@ -10,7 +10,7 @@ export function MapLine({lineH} : {lineH : number}) {
             }
             `}</style>
             
-            <div className="absolute left-1/2 top-0 -translate-x-1/2 w-0.5 z-0 h-full rounded-sm opacity-60 
+            <div className="absolute left-1/2 top-0 -translate-x-1/2 w-0.5 h-full rounded-sm opacity-60 
             transition-[height] duration-2000 ease-in-out bg-size-[2px_200px]"
                 style={{
                     height:"100%",
