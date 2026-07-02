@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import logo from "@/public/logo.png";
 import { Code2 } from "lucide-react";
 
 const links = [
@@ -14,14 +16,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-bg-primary/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+    <nav className="sticky top-4 z-50 mx-auto max-w-6xl rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)]">
+      <div className="flex h-16 items-center justify-between px-6">
 
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-blue">
-            <Code2 size={18} className="text-white" />
-          </div>
-          <span className="text-lg font-bold text-white">DevPath</span>
+        <Link href="/" className="flex items-center">
+          <Image src={logo} alt="logo" height={20} />
         </Link>
 
         <div className="flex items-center gap-1">
@@ -32,7 +31,7 @@ export default function Navbar() {
               className={`rounded-lg px-4 py-1.5 text-sm font-medium transition-colors ${
                 pathname.startsWith(link.href)
                   ? "bg-bg-card text-white"
-                  : "text-gray-400 hover:text-white"
+                  : "text-white hover:text-gray-400"
               }`}
             >
               {link.label}
@@ -40,9 +39,9 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className="rounded-lg bg-accent-blue px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
+        <Link href="/auth/signin" className="rounded-lg bg-accent-blue px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90">
           شروع رایگان
-        </button>
+        </Link>
 
       </div>
     </nav>

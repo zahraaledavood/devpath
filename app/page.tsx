@@ -90,7 +90,7 @@ const features: Feature[] = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-bg-primary text-white">
+    <div className="min-h-screen  text-white">
       <Navbar />
 
       {/* Hero */}
@@ -101,7 +101,7 @@ export default function HomePage() {
             مسیر شغلی با هوش مصنوعی
           </span>
 
-          <h1 className="mb-5 text-5xl font-extrabold leading-snug">
+          <h1 className="mb-5 text-5xl font-[950] leading-snug">
             شغل رویاییت
             <br />
             رو با برنامه
@@ -117,13 +117,13 @@ export default function HomePage() {
           <div className="flex justify-end gap-3">
             <Link
               href="/roadmap"
-              className="rounded-xl bg-accent-blue px-7 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="rounded-xl bg-accent-blue px-7 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
             >
               شروع رایگان
             </Link>
             <Link
               href="/questions"
-              className="rounded-xl border border-border bg-bg-card px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-bg-hover"
+              className="rounded-xl border border-border bg-bg-card px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-bg-hover"
             >
               بانک سوالات
             </Link>
@@ -149,9 +149,10 @@ export default function HomePage() {
       </div>
 
 
+
       {/* Features */}
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="mb-2 text-center text-3xl font-bold">ابزارهای مسیر شغلی</h2>
+        <h2 className="mb-2 text-center text-3xl font-[950]">ابزارهای مسیر شغلی</h2>
         <p className="mb-12 text-center text-gray-400">هر چیزی که برای رسیدن به شغل رویاییت نیاز داری</p>
 
         <div className="grid grid-cols-3 gap-5">
@@ -163,7 +164,7 @@ export default function HomePage() {
                 <div className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl ${f.bg}`}>
                   <f.icon size={22} className={f.color} />
                 </div>
-                <h3 className="mb-2.5 text-base font-bold">{f.title}</h3>
+                <h3 className="mb-2.5 text-lg font-extrabold">{f.title}</h3>
                 <p className="text-sm leading-7 text-gray-400">{f.desc}</p>
               </div>
             </Link>

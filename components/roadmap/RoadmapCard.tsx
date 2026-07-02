@@ -17,7 +17,13 @@ export default function RoadmapCard({ roadmap }: { roadmap: Roadmap }) {
 
   return (
     <Link href={`/roadmap/${roadmap.stack}`} className="group block">
-      <div className="h-full rounded-2xl border border-border bg-bg-card p-6 transition-all duration-200 hover:border-accent-blue hover:bg-bg-hover">
+      <div className="h-full rounded-2xl border border-border bg-bg-card p-6 transition-all duration-200 hover:border-accent-blue hover:bg-bg-hover"
+      style={{
+        border: "1px solid rgba(255,255,255,0.12)",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08)",
+      }}  
+      
+      >
 
         <div className="mb-4">
           <span className={`rounded-full px-3 py-1 text-xs font-semibold ${stackColors[roadmap.stack] ?? "text-gray-400 bg-gray-400/10"}`}>

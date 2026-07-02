@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model questions {
+  id         String    @id
+  title      String
+  difficulty String
+  stack      String
+  category   String
+  tags       String[]  @default([])
+  follow_ups String[]  @default([])
+  answer     String
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+
+model Resume {
+  id               String   @id @default(uuid())
+  fullName         String   @map("full_name")
+  roleTitle        String   @map("role_title")
+  category         String
+  yearsExperience  Int      @map("years_experience")
+  stack            String[]
+  viewCount        Int      @default(0) @map("view_count")
+  fileUrl          String   @map("file_url")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  @@map("resumes")
+}

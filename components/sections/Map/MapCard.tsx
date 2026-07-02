@@ -7,15 +7,15 @@ import '@/app/globals.css';
 export function MapCard({item, active}: any) {
     return(
         <div
-        className={`w-70 rounded-2xl px-6 py-5 backdrop-blur-xl transition-all duration-300 relative overflow-hidden z-10 ${
-            active ? "bg-white/10" : "bg-white/5"
+        className={`w-70 rounded-3xl px-4 py-5 backdrop-blur-2xl backdrop-saturate-150 transition-all duration-300 relative overflow-hidden z-10 ${
+            active ? "bg-white/12" : "bg-white/[0.06]"
           }`}
           style={{
-            border: `1px solid ${active ? item.color : "rgba(255,255,255,0.08)"}`,
+            border: `1px solid ${active ? `${item.color}50` : "rgba(255,255,255,0.12)"}`,
             boxShadow: active
-              ? `0 0 40px ${item.glow}, 0 8px 32px rgba(0,0,0,0.3)`
-              : "0 4px 20px rgba(0,0,0,0.2)",
-          }}    
+              ? `0 0 40px ${item.glow}, 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)`
+              : "0 4px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08)",
+          }}   
         >
             {active && (
                 <div className="absolute inset-0 rounded-3xl pointer-events-none"
@@ -32,7 +32,7 @@ export function MapCard({item, active}: any) {
                     <div className="text-xs font-bold tracking-0.5 mb-2.5">
                         مرحله {item.level}
                     </div>
-                    <div className="text-base font-bold text-white leading-tight rtl">
+                    <div className="text-base font-black text-white leading-tight rtl">
                         {item.title}
                     </div> 
                     <div className="text-sm font-normal text-gray-400 leading-tight rtl mt-3">

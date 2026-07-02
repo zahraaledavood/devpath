@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #0d1117;
-  --color-bg-secondary: #161b22;
-  --color-bg-card: #1c2333;
-  --color-bg-hover: #212840;
+  --color-bg-primary: #1a2438;
+  --color-bg-secondary: #222e48;
+  --color-bg-card: #2b3a5a;
+  --color-bg-hover: #324269;
   --color-accent-blue: #4f8ef7;
   --color-accent-green: #3fb950;
   --color-accent-yellow: #f0c040;
@@ -18,20 +18,29 @@
 
 html {
   direction: rtl;
+  background-color: var(--color-bg-primary);
 }
 
 body {
-  background-color: var(--color-bg-primary);
   color: white;
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @utility animate-shimmer {
-  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.08) 50%, transparent 75%);
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 75%
+  );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

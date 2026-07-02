@@ -13,7 +13,7 @@ export default function MainMap(){
 
   useEffect(()=> {
     const timer = setTimeout(() => setLineH(100), 500);
-    const lineTimer = setTimeout(() => setShowLine(true), 900); 
+    const lineTimer = setTimeout(() => setShowLine(true), 1300); 
     return () => { clearTimeout(timer); clearTimeout(lineTimer); }    
   }, []);
 
